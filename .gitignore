@@ -12,6 +12,9 @@
 /build
 
 # misc
+/design
+/README-template.md
+/style-guide.md
 .DS_Store
 .env.local
 .env.development.local
