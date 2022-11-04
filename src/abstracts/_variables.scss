@@ -1,0 +1,17 @@
+// ## Colors
+//### Neutral
+$color-input: hsl(0, 0%, 52%);
+$background-light: hsl(0, 0%, 98%);
+
+:root {
+  --color-elements: hsl(0, 0%, 100%);
+  --color-text: hsl(200, 15%, 8%);
+}
+
+// ### dark Theme
+$background-dark: hsl(207, 26%, 17%);
+
+[data-theme="dark"] {
+  --color-elements: hsl(209, 23%, 22%);
+  --color-text: hsl(0, 0%, 100%);
+}
