@@ -1,3 +1,14 @@
-.App {
-  text-align: center;
+// .App {
+//   // text-align: center;
+// }
+
+.main {
+  margin: 5rem auto;
+  width: 85%;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }

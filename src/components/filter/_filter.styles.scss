@@ -1,0 +1,39 @@
+.filter {
+  background-color: var(--color-elements);
+  border-radius: $radius;
+  box-shadow: $box-shadow;
+  position: relative;
+  &__setting {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+  &__text {
+    margin-right: 2.5rem;
+    font-weight: 600;
+  }
+  &__icon {
+    width: 1.5rem;
+    cursor: pointer;
+    fill: var(--color-text);
+  }
+  &__list {
+    position: absolute;
+    right: 0;
+    top: 4.5rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    background-color: var(--color-elements);
+    border-radius: $radius;
+    box-shadow: $box-shadow;
+    z-index: 2;
+  }
+  &__item {
+    font-weight: 600;
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}
