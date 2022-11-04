@@ -30,6 +30,7 @@ body {
   min-height: 100vh;
   background-color: $background-light;
   color: var(--color-text);
+  font-size: 1.4rem;
 
   &::-webkit-scrollbar {
     width: 8px;
