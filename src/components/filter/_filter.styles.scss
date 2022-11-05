@@ -1,7 +1,5 @@
 .filter {
-  background-color: var(--color-elements);
-  border-radius: $radius;
-  box-shadow: $box-shadow;
+  @include element;
   position: relative;
   &__setting {
     display: flex;
@@ -24,9 +22,7 @@
     top: 4.5rem;
     padding: 1rem 2rem;
     width: 100%;
-    background-color: var(--color-elements);
-    border-radius: $radius;
-    box-shadow: $box-shadow;
+    @include element;
     z-index: 2;
   }
   &__item {

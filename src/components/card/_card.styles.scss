@@ -1,0 +1,28 @@
+.card {
+  @include element;
+  overflow: hidden;
+  // height: 35rem;
+  // width: 25rem;
+  &__img {
+    height: 45%;
+    width: 100%;
+    display: block;
+    background-color: red;
+  }
+  &__details {
+    padding-top: 2rem;
+    padding-left: 2rem;
+  }
+  &__name {
+    font-weight: 800;
+    margin-bottom: 2rem;
+  }
+  &__props {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+    span {
+      font-weight: 600;
+    }
+  }
+}
