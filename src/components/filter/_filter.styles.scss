@@ -1,6 +1,10 @@
 .filter {
   @include element;
   position: relative;
+  @include respond(phone) {
+    margin-top: 5rem;
+    align-self: start;
+  }
   &__setting {
     display: flex;
     align-items: center;

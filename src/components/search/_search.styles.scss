@@ -4,12 +4,14 @@
   padding: 1rem 2rem;
   @include element;
   width: 45%;
+  @include respond(phone) {
+    width: 100%;
+    overflow: hidden;
+  }
   &__icon {
     margin-right: 2rem;
     fill: $color-input;
   }
-  // &__form {
-  // }
   &__input {
     outline: none;
     border: none;
