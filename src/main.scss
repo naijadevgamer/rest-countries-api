@@ -4,14 +4,16 @@
 @import "./index";
 @import "./App";
 
-// PAGES
-@import "./pages/home/home.styles.scss";
-@import "./pages/detail/detail.styles.scss";
-
 // COMPONENTS
 @import "./components/header/header.styles";
 @import "./components/search/search.styles";
 @import "./components/filter/filter.styles";
 @import "./components/card-container/card-container.styles";
 @import "./components/card/card.styles";
+@import "./components/button/button.styles";
+@import "./components/parameters/parameters.styles";
 @import "./components/detail/detail.styles";
+
+// PAGES
+@import "./pages/home/home.styles.scss";
+@import "./pages/detail/detail.styles.scss";

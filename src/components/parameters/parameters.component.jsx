@@ -3,8 +3,8 @@ import React from "react";
 class Parameters extends React.Component {
   render() {
     return (
-      <div className="detail__sections">
-        <div className="detail__info-sect1">
+      <div className="parameters">
+        <div className="parameters__sect1">
           <div className="card__props">
             <span>Native Name:</span> 206,135,893
           </div>
@@ -21,7 +21,8 @@ class Parameters extends React.Component {
             <span>Capital:</span> Brussels
           </div>
         </div>
-        <div className="detail__info-sect2">
+
+        <div className="parameters__sect2">
           <div className="card__props">
             <span>Top level Domain:</span> .be
           </div>
