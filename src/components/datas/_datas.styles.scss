@@ -1,0 +1,16 @@
+.datas {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: space-between;
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+  &__sect2 {
+    @include respond(tab-port) {
+      margin-top: 3rem;
+    }
+  }
+  &__data-item {
+    @include data;
+  }
+}

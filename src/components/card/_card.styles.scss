@@ -17,12 +17,7 @@
     font-weight: 800;
     margin-bottom: 2rem;
   }
-  &__props {
-    &:not(:last-child) {
-      margin-bottom: 1rem;
-    }
-    span {
-      font-weight: 600;
-    }
+  &__data {
+    @include data;
   }
 }

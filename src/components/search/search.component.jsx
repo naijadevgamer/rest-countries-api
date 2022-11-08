@@ -5,7 +5,10 @@ class Search extends React.Component {
   render() {
     return (
       <div className="search">
-        <SearchIcon className="search__icon" />
+        <div className="search__icon-box">
+          <SearchIcon className="search__icon" />
+        </div>
+
         <form className="search__form">
           <input
             className="search__input"

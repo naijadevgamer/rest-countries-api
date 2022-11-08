@@ -1,21 +1,3 @@
 // .App {
 //   // text-align: center;
 // }
-
-.main {
-  margin: 5rem auto;
-  width: 85%;
-  @include respond(phone) {
-    width: 90%;
-    margin: 3rem auto;
-  }
-}
-.search-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  @include respond(phone) {
-    flex-direction: column;
-  }
-}

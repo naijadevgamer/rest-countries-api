@@ -1,7 +1,12 @@
 .header {
-  height: 5rem;
+  height: 6rem;
   background-color: var(--color-elements);
   box-shadow: $box-shadow;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
 
   &__container {
     margin: 0 auto;

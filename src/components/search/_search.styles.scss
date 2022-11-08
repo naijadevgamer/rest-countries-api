@@ -2,17 +2,26 @@
   display: flex;
   align-items: center;
   padding: 1rem 2rem;
+  overflow: hidden;
   @include element;
   width: 45%;
   @include respond(phone) {
     width: 100%;
-    overflow: hidden;
   }
-  &__icon {
-    margin-right: 2rem;
+  &__icon-box {
     fill: $color-input;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+  }
+  &__form {
+    height: 100%;
+    width: 100%;
   }
   &__input {
+    height: 100%;
+    width: 100%;
     outline: none;
     border: none;
     color: $color-input;

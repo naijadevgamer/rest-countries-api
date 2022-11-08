@@ -26,3 +26,13 @@
   background-color: var(--color-elements);
   border-radius: $radius;
 }
+
+/// utility
+@mixin data {
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  span {
+    font-weight: 600;
+  }
+}
