@@ -1,15 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { ReactComponent as ArrowLeft } from "../../icons/arrow-left2.svg";
 import Datas from "../datas/datas.component";
+import Button from "../button/button.component";
 
 class Detail extends React.Component {
   render() {
     return (
       <div className="detail">
-        <button className="detail__button detail__button--back">
-          <ArrowLeft className="detail__back-icon" />
-          <span>Back</span>
-        </button>
+        <Link to="/" className="detail__button-link">
+          <Button>
+            <ArrowLeft className="detail__back-icon" />
+            <span>Back</span>
+          </Button>
+        </Link>
+
         <div className="detail__info">
           <div className="detail__flag-img"></div>
           <div className="detail__info-datas">
@@ -17,15 +22,11 @@ class Detail extends React.Component {
             <Datas />
             <div className="detail__border">
               <span>Border Countries: </span>
-              <button className="detail__button detail__button--border">
-                france
-              </button>
-              <button className="detail__button detail__button--border">
-                Germany
-              </button>
-              <button className="detail__button detail__button--border">
-                Germany
-              </button>
+              <div className="detail__border-items">
+                <Button>France</Button>
+                <Button>France</Button>
+                <Button>France</Button>
+              </div>
             </div>
           </div>
         </div>

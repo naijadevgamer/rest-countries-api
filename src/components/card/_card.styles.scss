@@ -8,6 +8,9 @@
     width: 100%;
     display: block;
     background-color: red;
+    @include respond(phone) {
+      height: 50%;
+    }
   }
   &__details {
     padding-top: 2rem;

@@ -1,0 +1,11 @@
+.button {
+  border: none;
+  @include element;
+  padding: 1rem 1rem;
+  cursor: pointer;
+  font-family: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12rem;
+}

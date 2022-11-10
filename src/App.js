@@ -7,6 +7,9 @@ import DetailPage from "./pages/detail/detail.page";
 
 class App extends React.Component {
   render() {
+    console.log("hello");
+
+    // https://restcountries.com/v3/name/nigeria
     return (
       <Router>
         <div className="App">
