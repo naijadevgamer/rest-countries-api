@@ -21,12 +21,15 @@ class Detail extends React.Component {
             <div className="detail__name">Belgium</div>
             <Datas />
             <div className="detail__border">
-              <span>Border Countries: </span>
-              <div className="detail__border-items">
-                <Button>France</Button>
-                <Button>France</Button>
-                <Button>France</Button>
-              </div>
+              <span>Border Countries:</span>
+              <Button>France</Button>
+              <Button>Germany</Button>
+              <Button>Netherlands</Button>
+              <Button>Germany</Button>
+              <Button>Germany</Button>
+              <Button>Germany</Button>
+              <Button>Germany</Button>
+              <Button>Germany</Button>
             </div>
           </div>
         </div>

@@ -22,6 +22,7 @@
   }
   &__list {
     position: absolute;
+    // transform: scale(0.5);
     right: 0;
     top: 4.5rem;
     padding: 1rem 2rem;
@@ -35,5 +36,16 @@
     &:not(:last-child) {
       margin-bottom: 1rem;
     }
+  }
+}
+
+@keyframes turnBig {
+  0% {
+    opacity: 0.5;
+    transform: rotate(-360deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0);
   }
 }

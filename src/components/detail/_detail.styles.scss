@@ -64,8 +64,13 @@
   }
   &__border {
     margin-top: 3rem;
+    line-height: 30px;
     span {
       font-weight: 600;
+      margin-right: 1rem;
+      @include respond(phone) {
+        display: block;
+      }
     }
   }
 }

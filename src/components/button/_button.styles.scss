@@ -1,11 +1,14 @@
 .button {
   border: none;
   @include element;
-  padding: 1rem 1rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
   font-family: inherit;
-  display: flex;
   justify-content: center;
   align-items: center;
-  width: 12rem;
+  width: 10rem;
+  display: inline-flex;
+  &:not(:last-child) {
+    margin-right: 0.5rem;
+  }
 }

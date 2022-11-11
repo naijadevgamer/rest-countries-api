@@ -1,6 +1,11 @@
 .card {
   @include element;
   overflow: hidden;
+  transition: all ease 0.3s;
+  transform: scale(1);
+  &:hover {
+    transform: scale(1.01);
+  }
   // height: 35rem;
   // width: 25rem;
   &__img {
