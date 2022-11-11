@@ -13,6 +13,8 @@ class Search extends React.Component {
           <input
             className="search__input"
             type="text"
+            value={this.props.searchValue}
+            onChange={this.props.handleChange}
             placeholder="Search for a country..."
           />
         </form>
