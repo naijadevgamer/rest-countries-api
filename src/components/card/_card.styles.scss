@@ -3,6 +3,14 @@
   overflow: hidden;
   transition: all ease 0.3s;
   transform: scale(1);
+  width: 27rem;
+  height: 37rem;
+  @include respond(phone) {
+    width: 100%;
+    max-width: 30rem;
+  }
+  // margin-bottom: 5rem;
+
   &:hover {
     transform: scale(1.01);
   }

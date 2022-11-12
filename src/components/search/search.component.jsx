@@ -2,7 +2,13 @@ import React from "react";
 import { ReactComponent as SearchIcon } from "../../icons/search.svg";
 
 class Search extends React.Component {
+  // componentDidUpdate() {
+  //   // if (prevProps !== this.props.searchValue) {
+  //   this.props.handleChange(null);
+  //   // }
+  // }
   render() {
+    // this.componentDidUpdate(this.props.searchValue);
     return (
       <div className="search">
         <div className="search__icon-box">
