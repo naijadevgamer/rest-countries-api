@@ -2,7 +2,7 @@
   @include element;
   position: relative;
   @include respond(phone) {
-    margin-top: 5rem;
+    margin-top: 3rem;
     align-self: start;
   }
   &__setting {

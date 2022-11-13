@@ -15,7 +15,7 @@ class Card extends React.Component {
             <span>Region:</span> {data.region}
           </div>
           <div className="card__data">
-            <span>Capital:</span> {data.capital[0]}
+            <span>Capital:</span> hell0
           </div>
         </div>
       </div>

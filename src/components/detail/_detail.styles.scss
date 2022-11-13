@@ -4,7 +4,7 @@
   font-size: 1.6rem;
   @include respond(phone) {
     width: 90%;
-    margin: 10rem auto;
+    margin: 9rem auto;
   }
   &__button-link {
     text-decoration: none;

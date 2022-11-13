@@ -12,28 +12,40 @@ class HomePage extends React.Component {
     };
   }
   getDatas = async () => {
-    const response = await fetch(
-      `https://restcountries.com/v3/name/${this.state.searchValue}`
-    );
+    const response = await fetch(`https://restcountries.com/v3/all`);
     const data = await response.json();
+    console.log(data);
     if (response.status !== 200) {
       throw new Error("cannot get data");
     }
-    return data;
+    if (data) {
+      this.setState({ datas: data });
+    }
   };
   componentDidMount() {
-    // console.log(this.getDatas());
-    this.getDatas()
-      .then((data) => {
-        this.setState({ datas: data }, () => {
-          console.log(this.state.datas);
-        });
-      })
-      .catch((err) => {
-        console.log("message", err.message);
-      });
-    // https://restcountries.com/v3/name/nigeria
+    this.getDatas();
+    // .then((data) => {
+    //   this.setState({ datas: data }, () => {
+    //     console.log(this.state.datas);
+    //   });
+    // })
+    // .catch((err) => {
+    //   console.log("Message", err.message);
+    // });
   }
+  // componentDidUpdate(prevProps, prevState) {
+  //   if (prevState.searchValue !== this.state.searchValue) {
+  //     this.getDatas(this.state.searchValue);
+  //     // .then((data) => {
+  //     //   this.setState({ datas: data }, () => {
+  //     //     console.log(this.state.datas);
+  //     //   });
+  //     // })
+  //     // .catch((err) => {
+  //     //   console.log("Message", err.message);
+  //     // });
+  //   }
+  // }
 
   render() {
     const { searchValue, datas } = this.state;

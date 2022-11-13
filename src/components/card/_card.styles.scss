@@ -2,22 +2,13 @@
   @include element;
   overflow: hidden;
   transition: all ease 0.3s;
-  transform: scale(1);
-  width: 27rem;
-  height: 37rem;
   @include respond(phone) {
-    width: 100%;
-    max-width: 30rem;
+    width: 90%;
+    max-width: 40rem;
+    height: 37rem;
   }
-  // margin-bottom: 5rem;
-
-  &:hover {
-    transform: scale(1.01);
-  }
-  // height: 35rem;
-  // width: 25rem;
   &__img {
-    height: 45%;
+    height: 50%;
     width: 100%;
     display: block;
     background-color: red;
