@@ -5,7 +5,7 @@ class Card extends React.Component {
     const { data } = this.props;
     return (
       <div className="card">
-        <div className="card__img"></div>
+        <img className="card__img" src={data.flags[1]} alt="Flag" />
         <div className="card__details">
           <div className="card__name">{data.name.common}</div>
           <div className="card__data">
@@ -15,7 +15,7 @@ class Card extends React.Component {
             <span>Region:</span> {data.region}
           </div>
           <div className="card__data">
-            <span>Capital:</span> hell0
+            <span>Capital:</span> {data.capital}
           </div>
         </div>
       </div>

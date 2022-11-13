@@ -6,16 +6,9 @@ class CardContainer extends React.Component {
     const { datas } = this.props;
     return (
       <div className="card-container">
-        {datas.map((data) => {
-          return <Card data={data} />;
-        })}
-
-        {/* <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card /> */}
+        {datas.map((data, index) => (
+          <Card key={index.toString()} data={data} />
+        ))}
       </div>
     );
   }

@@ -8,10 +8,10 @@
     height: 37rem;
   }
   &__img {
-    height: 50%;
+    height: 45%;
     width: 100%;
     display: block;
-    background-color: red;
+    // background-color: red;
     @include respond(phone) {
       height: 50%;
     }

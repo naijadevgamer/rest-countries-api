@@ -8,44 +8,23 @@ class HomePage extends React.Component {
     super();
     this.state = {
       datas: [],
-      searchValue: "be",
+      searchValue: "",
     };
   }
   getDatas = async () => {
-    const response = await fetch(`https://restcountries.com/v3/all`);
+    const response = await fetch("https://restcountries.com/v3/all");
     const data = await response.json();
-    console.log(data);
     if (response.status !== 200) {
       throw new Error("cannot get data");
     }
-    if (data) {
-      this.setState({ datas: data });
-    }
+    console.log(data);
+    this.setState({ datas: data });
   };
+
   componentDidMount() {
     this.getDatas();
-    // .then((data) => {
-    //   this.setState({ datas: data }, () => {
-    //     console.log(this.state.datas);
-    //   });
-    // })
-    // .catch((err) => {
-    //   console.log("Message", err.message);
-    // });
+    console.log("mounted");
   }
-  // componentDidUpdate(prevProps, prevState) {
-  //   if (prevState.searchValue !== this.state.searchValue) {
-  //     this.getDatas(this.state.searchValue);
-  //     // .then((data) => {
-  //     //   this.setState({ datas: data }, () => {
-  //     //     console.log(this.state.datas);
-  //     //   });
-  //     // })
-  //     // .catch((err) => {
-  //     //   console.log("Message", err.message);
-  //     // });
-  //   }
-  // }
 
   render() {
     const { searchValue, datas } = this.state;
@@ -55,13 +34,17 @@ class HomePage extends React.Component {
       });
     };
 
+    const filteredDatas = datas.filter((data) =>
+      data.name.common.toLowerCase().includes(searchValue.toLowerCase())
+    );
+
     return (
       <div className="home">
         <div className="home__search-filter-box">
           <Search searchValue={searchValue} handleChange={handleChange} />
           <Filter />
         </div>
-        <CardContainer datas={datas} />
+        <CardContainer datas={filteredDatas} />
       </div>
     );
   }
