@@ -7,7 +7,7 @@ class CardContainer extends React.Component {
     return (
       <div className="card-container">
         {datas.map((data, index) => (
-          <Card key={index.toString()} data={data} />
+          <Card key={index.toString()} data={data} link={index.toString()} />
         ))}
       </div>
     );

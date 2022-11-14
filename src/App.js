@@ -15,7 +15,10 @@ class App extends React.Component {
           <Header />
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/detail" element={<DetailPage />} />
+            {/* <Route path="/detail" element={<DetailPage />} /> */}
+            <Route path="/detail">
+              <Route path=":id" element={<DetailPage />} />
+            </Route>
           </Routes>
         </div>
       </Router>

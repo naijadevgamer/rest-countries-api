@@ -6,6 +6,7 @@ import Button from "../button/button.component";
 
 class Detail extends React.Component {
   render() {
+    const { data } = this.props;
     return (
       <div className="detail">
         <Link to="/" className="detail__button-link">
@@ -16,10 +17,10 @@ class Detail extends React.Component {
         </Link>
 
         <div className="detail__info">
-          <div className="detail__flag-img"></div>
+          <img src={data.flags[1]} className="detail__flag-img" />
           <div className="detail__info-datas">
-            <div className="detail__name">Belgium</div>
-            <Datas />
+            <div className="detail__name">{data.name.common}</div>
+            <Datas data={data} />
             <div className="detail__border">
               <span>Border Countries:</span>
               <Button>France</Button>

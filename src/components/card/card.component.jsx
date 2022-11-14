@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class Card extends React.Component {
   render() {
-    const { data } = this.props;
+    const { data, link } = this.props;
     return (
-      <div className="card">
+      <Link to={`/detail/${link}`} className="card">
         <img className="card__img" src={data.flags[1]} alt="Flag" />
         <div className="card__details">
           <div className="card__name">{data.name.common}</div>
@@ -18,7 +19,7 @@ class Card extends React.Component {
             <span>Capital:</span> {data.capital}
           </div>
         </div>
-      </div>
+      </Link>
     );
   }
 }

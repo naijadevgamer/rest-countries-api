@@ -2,16 +2,19 @@
   @include element;
   overflow: hidden;
   transition: all ease 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+
   @include respond(phone) {
     width: 90%;
-    max-width: 40rem;
-    height: 37rem;
+    max-width: 35rem;
+    height: 40rem;
   }
   &__img {
     height: 45%;
     width: 100%;
     display: block;
-    // background-color: red;
     @include respond(phone) {
       height: 50%;
     }
