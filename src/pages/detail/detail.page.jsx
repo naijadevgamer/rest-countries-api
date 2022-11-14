@@ -18,8 +18,6 @@ const DetailPage = () => {
 
   useEffect(() => {
     getDatas();
-    console.log("mount");
-    console.log(id);
   }, []);
 
   return (

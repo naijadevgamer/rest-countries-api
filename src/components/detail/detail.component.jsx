@@ -17,7 +17,7 @@ class Detail extends React.Component {
         </Link>
 
         <div className="detail__info">
-          <img src={data.flags[1]} className="detail__flag-img" />
+          <img src={data.flags[1]} alt="flag" className="detail__flag-img" />
           <div className="detail__info-datas">
             <div className="detail__name">{data.name.common}</div>
             <Datas data={data} />
