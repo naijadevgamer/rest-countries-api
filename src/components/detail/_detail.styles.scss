@@ -8,8 +8,10 @@
   }
   &__button-link {
     text-decoration: none;
-    width: 12rem;
-    display: inline-block;
+    display: inline-flex;
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
   }
 
   &__back-icon {

@@ -8,14 +8,6 @@ class Detail extends React.Component {
   render() {
     const { data, allDatas } = this.props;
     console.log(allDatas);
-    const bord = data.borders
-      ? data.borders.map((border) => {
-          allDatas
-            .filter((data) => border === data.cca3)
-            .map((data) => data.name.common);
-        })
-      : "Nil";
-    // console.log(bord);
 
     return (
       <div className="detail">
@@ -33,19 +25,21 @@ class Detail extends React.Component {
             <Datas data={data} />
             <div className="detail__border">
               <span>Border Countries:</span>
-              {/* {data.borders.map((border) => {
-                allDatas
-                  .filter((data) => border === data.cca3)
-                  .map((data) => <Button>{data.name.common}</Button>);
-              })} */}
-              <Button>France</Button>
-              <Button>Germany</Button>
-              <Button>Netherlands</Button>
-              <Button>Germany</Button>
-              <Button>Germany</Button>
-              <Button>Germany</Button>
-              <Button>Germany</Button>
-              <Button>Germany</Button>
+              {data.borders !== undefined
+                ? data.borders.map((border) =>
+                    allDatas
+                      .filter((data) => border === data.cca3)
+                      .map((data) => (
+                        <Link
+                          to={`/detail/${data.name.common}`}
+                          className="detail__button-link"
+                        >
+                          {" "}
+                          <Button>{data.name.common}</Button>
+                        </Link>
+                      ))
+                  )
+                : "Nil"}
             </div>
           </div>
         </div>

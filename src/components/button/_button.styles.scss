@@ -6,9 +6,8 @@
   font-family: inherit;
   justify-content: center;
   align-items: center;
-  width: 10rem;
+  width: max-content;
+  min-width: 10rem;
+
   display: inline-flex;
-  &:not(:last-child) {
-    margin-right: 0.5rem;
-  }
 }
