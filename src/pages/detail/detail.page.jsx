@@ -25,9 +25,8 @@ const DetailPage = () => {
       {datas
         .filter((data) => id === data.name.common)
         .map((data, index) => (
-          <Detail key={index.toString()} data={data} />
+          <Detail key={index.toString()} data={data} allDatas={datas} />
         ))}
-      {/* <Detail /> */}
     </>
   );
 };

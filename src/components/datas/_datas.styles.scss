@@ -6,8 +6,10 @@
     flex-direction: column;
   }
   &__sect2 {
+    margin-left: 2rem;
     @include respond(tab-port) {
       margin-top: 3rem;
+      margin-left: 0;
     }
   }
   &__data-item {

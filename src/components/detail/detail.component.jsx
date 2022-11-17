@@ -6,7 +6,17 @@ import Button from "../button/button.component";
 
 class Detail extends React.Component {
   render() {
-    const { data } = this.props;
+    const { data, allDatas } = this.props;
+    console.log(allDatas);
+    const bord = data.borders
+      ? data.borders.map((border) => {
+          allDatas
+            .filter((data) => border === data.cca3)
+            .map((data) => data.name.common);
+        })
+      : "Nil";
+    // console.log(bord);
+
     return (
       <div className="detail">
         <Link to="/" className="detail__button-link">
@@ -23,6 +33,11 @@ class Detail extends React.Component {
             <Datas data={data} />
             <div className="detail__border">
               <span>Border Countries:</span>
+              {/* {data.borders.map((border) => {
+                allDatas
+                  .filter((data) => border === data.cca3)
+                  .map((data) => <Button>{data.name.common}</Button>);
+              })} */}
               <Button>France</Button>
               <Button>Germany</Button>
               <Button>Netherlands</Button>

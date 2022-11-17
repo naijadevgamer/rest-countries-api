@@ -3,11 +3,14 @@ import React from "react";
 class Datas extends React.Component {
   render() {
     const { data } = this.props;
+    const languages = Object.values(data.languages);
+    const currencies = Object.values(data.currencies)[0];
+    const nativeName = Object.values(data.name.nativeName)[0].official;
     return (
       <div className="datas">
         <div className="datas__sect1">
           <div className="datas__data-item">
-            <span>Native Name:</span> 206,135,893
+            <span>Native Name:</span> {nativeName}
           </div>
           <div className="datas__data-item">
             <span>Population:</span> {data.population}
@@ -28,10 +31,11 @@ class Datas extends React.Component {
             <span>Top level Domain:</span> {data.tld}
           </div>
           <div className="datas__data-item">
-            <span>Currencies:</span>
+            <span>Currencies:</span> {currencies.name}
           </div>
           <div className="datas__data-item">
-            <span>Languages:</span> Dutch,French,German
+            <span>Languages:</span>{" "}
+            {languages.length === 1 ? languages : languages.join(", ")}
           </div>
         </div>
       </div>
