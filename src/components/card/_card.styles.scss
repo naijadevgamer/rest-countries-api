@@ -5,7 +5,14 @@
   cursor: pointer;
   text-decoration: none;
   color: inherit;
-
+  height: 40rem;
+  width: 22%;
+  @include respond(tab-land) {
+    height: 35rem;
+  }
+  @include respond(tab-port) {
+    width: 30%;
+  }
   @include respond(phone) {
     width: 90%;
     max-width: 35rem;

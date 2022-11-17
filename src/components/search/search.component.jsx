@@ -2,20 +2,17 @@ import React from "react";
 import { ReactComponent as SearchIcon } from "../../icons/search.svg";
 
 class Search extends React.Component {
-  // componentDidUpdate() {
-  //   // if (prevProps !== this.props.searchValue) {
-  //   this.props.handleChange(null);
-  //   // }
-  // }
   render() {
-    // this.componentDidUpdate(this.props.searchValue);
+    const handleSubmit = (e) => {
+      e.preventDefault();
+    };
     return (
       <div className="search">
         <div className="search__icon-box">
           <SearchIcon className="search__icon" />
         </div>
 
-        <form className="search__form">
+        <form className="search__form" onSubmit={handleSubmit}>
           <input
             className="search__input"
             type="text"
