@@ -7,8 +7,8 @@ import Button from "../button/button.component";
 class Detail extends React.Component {
   render() {
     const { data, allDatas } = this.props;
-    console.log(allDatas);
-
+    // data is for the country selected
+    // allDatas is the array of all countries
     return (
       <div className="detail">
         <Link to="/" className="detail__button-link">
@@ -25,21 +25,24 @@ class Detail extends React.Component {
             <Datas data={data} />
             <div className="detail__border">
               <span>Border Countries:</span>
-              {data.borders !== undefined
-                ? data.borders.map((border) =>
-                    allDatas
-                      .filter((data) => border === data.cca3)
-                      .map((data) => (
-                        <Link
-                          to={`/detail/${data.name.common}`}
-                          className="detail__button-link"
-                        >
-                          {" "}
-                          <Button>{data.name.common}</Button>
-                        </Link>
-                      ))
-                  )
-                : "Nil"}
+              {
+                data.borders !== undefined
+                  ? data.borders.map((border) =>
+                      allDatas
+                        .filter((data) => border === data.cca3)
+                        .map((data) => (
+                          <Link
+                            to={`/detail/${data.name.common}`}
+                            className="detail__button-link"
+                          >
+                            {" "}
+                            <Button>{data.name.common}</Button>
+                          </Link>
+                        ))
+                    )
+                  : "Nil"
+                // checks if there is border and convert the border values(cca3) to real country name
+              }
             </div>
           </div>
         </div>

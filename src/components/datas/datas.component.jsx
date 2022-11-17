@@ -4,8 +4,11 @@ class Datas extends React.Component {
   render() {
     const { data } = this.props;
     const languages = Object.values(data.languages);
+    // converts languages value to array
     const currencies = Object.values(data.currencies)[0];
+    // converts currencies value to array
     const nativeName = Object.values(data.name.nativeName)[0].official;
+    // converts native name value to array
     return (
       <div className="datas">
         <div className="datas__sect1">
