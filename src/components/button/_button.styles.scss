@@ -8,6 +8,7 @@
   align-items: center;
   width: max-content;
   min-width: 10rem;
-
   display: inline-flex;
+  transition: 0.3s ease;
+  color: var(--color-text);
 }

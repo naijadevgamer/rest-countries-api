@@ -1,6 +1,8 @@
 .filter {
   @include element;
   position: relative;
+  transition: 0.3s ease;
+  color: var(--color-text);
   @include respond(phone) {
     margin-top: 3rem;
     align-self: start;

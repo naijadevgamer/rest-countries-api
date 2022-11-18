@@ -1,12 +1,13 @@
 .card {
   @include element;
   overflow: hidden;
-  transition: all ease 0.3s;
+  transition: ease 0.3s;
   cursor: pointer;
   text-decoration: none;
   color: inherit;
   height: 40rem;
   width: 22%;
+  color: var(--color-text);
   @include respond(tab-land) {
     height: 35rem;
   }

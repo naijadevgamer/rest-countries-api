@@ -3,6 +3,7 @@
   align-items: center;
   padding: 1rem 2rem;
   overflow: hidden;
+  transition: 0.3s ease;
   @include element;
   width: 45%;
   @include respond(phone) {

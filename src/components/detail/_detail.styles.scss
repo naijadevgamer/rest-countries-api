@@ -2,6 +2,8 @@
   margin: 11rem auto;
   width: 85%;
   font-size: 1.6rem;
+  transition: 0.3s ease;
+  color: var(--color-text);
   @include respond(phone) {
     width: 90%;
     margin: 9rem auto;
@@ -19,6 +21,7 @@
     height: 1.5rem;
     width: 2rem;
     fill: var(--color-text);
+    transition: 0.3s ease;
   }
   &__info {
     display: flex;

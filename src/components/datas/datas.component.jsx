@@ -13,17 +13,13 @@ class Datas extends React.Component {
       data.currencies !== undefined ? Object.values(data.currencies)[0] : "";
 
     // converts native name value to array
-    const nativeName =
-      data.nativeName !== undefined
-        ? Object.values(data.name.nativeName)[0].official
-        : undefined;
+    // const nativeName = Object.values(data.name.nativeName)[0].official;
 
     return (
       <div className="datas">
         <div className="datas__sect1">
           <div className="datas__data-item">
-            <span>Native Name:</span>{" "}
-            {nativeName !== undefined ? nativeName : "Nil"}
+            <span>Native Name:</span> {"namt"}
           </div>
           <div className="datas__data-item">
             <span>Population:</span> {data.population}

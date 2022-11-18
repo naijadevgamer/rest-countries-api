@@ -6,16 +6,30 @@ import HomePage from "./pages/home/home.page";
 import DetailPage from "./pages/detail/detail.page";
 
 class App extends React.Component {
-  render() {
-    // const { monsters, searchField } = this.state;
+  constructor() {
+    super();
+    this.state = {
+      themeLight: true,
+    };
+  }
 
+  render() {
+    const { themeLight } = this.state;
+    const body = document.body;
+    if (!themeLight) {
+      body.style.backgroundColor = "hsl(207, 26%, 17%)";
+    } else {
+      body.style.backgroundColor = "hsl(0, 0%, 98%)";
+    }
+    const switchTheme = () => {
+      this.setState({ themeLight: !themeLight });
+    };
     return (
       <Router>
-        <div className="App">
-          <Header />
+        <div className="App" data-theme={themeLight ? "" : "dark"}>
+          <Header switchTheme={switchTheme} />
           <Routes>
             <Route path="/" element={<HomePage />} />
-            {/* <Route path="/detail" element={<DetailPage />} /> */}
             <Route path="/detail">
               <Route path=":id" element={<DetailPage />} />
             </Route>

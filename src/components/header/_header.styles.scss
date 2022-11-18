@@ -1,5 +1,7 @@
 .header {
   height: 6rem;
+  color: var(--color-text);
+  transition: 0.3s ease;
   background-color: var(--color-elements);
   box-shadow: $box-shadow;
   position: fixed;
@@ -38,8 +40,11 @@
     height: 2rem;
     width: 2rem;
     fill: var(--color-text);
+    transition: 0.3s ease;
   }
   &__theme-text {
+    color: var(--color-text);
+    transition: 0.3s ease;
     font-weight: 600;
     font-size: 1.6rem;
     min-width: max-content;
