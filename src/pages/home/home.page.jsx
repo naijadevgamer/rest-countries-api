@@ -7,6 +7,7 @@ class HomePage extends React.Component {
   constructor() {
     super();
     this.state = {
+      all: [],
       datas: [],
       searchValue: "",
     };
@@ -17,32 +18,43 @@ class HomePage extends React.Component {
     if (response.status !== 200) {
       throw new Error("cannot get data");
     }
-    console.log(data);
     this.setState({ datas: data });
+    this.setState({ all: data });
   };
 
   componentDidMount() {
     this.getDatas();
-    console.log("mounted");
   }
 
   render() {
-    const { searchValue, datas } = this.state;
+    const { searchValue, datas, all } = this.state;
     const handleChange = (e) => {
-      this.setState({ searchValue: e.target.value }, () => {
-        console.log(searchValue);
-      });
+      this.setState({ searchValue: e.target.value });
     };
 
     const filteredDatas = datas.filter((data) =>
       data.name.common.toLowerCase().includes(searchValue.toLowerCase())
     );
 
+    const filterAll = () => {
+      this.setState({
+        datas: all,
+      });
+    };
+    const handleFilterRegions = (e) => {
+      this.setState({
+        datas: all.filter((data) => data.region === e),
+      });
+    };
+
     return (
       <div className="home">
         <div className="home__search-filter-box">
           <Search searchValue={searchValue} handleChange={handleChange} />
-          <Filter />
+          <Filter
+            filterAll={filterAll}
+            handleFilterRegions={handleFilterRegions}
+          />
         </div>
         <CardContainer datas={filteredDatas} />
       </div>

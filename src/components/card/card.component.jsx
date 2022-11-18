@@ -16,7 +16,8 @@ class Card extends React.Component {
             <span>Region:</span> {data.region}
           </div>
           <div className="card__data">
-            <span>Capital:</span> {data.capital}
+            <span>Capital:</span>{" "}
+            {data.capital !== undefined ? data.capital : "Nil"}
           </div>
         </div>
       </Link>

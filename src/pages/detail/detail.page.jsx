@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Detail from "../../components/detail/detail.component";
 
+// Had to use a functional component here because of useParams hook.
 const DetailPage = () => {
   const [datas, setDatas] = useState([]);
   let { id } = useParams();
@@ -12,12 +13,12 @@ const DetailPage = () => {
     if (response.status !== 200) {
       throw new Error("cannot get data");
     }
-    console.log(data);
     setDatas(data);
   };
 
   useEffect(() => {
     getDatas();
+    console.log("hello");
   }, []);
 
   return (
@@ -30,11 +31,5 @@ const DetailPage = () => {
     </>
   );
 };
-
-// class DetailPage extends React.Component {
-//   render() {
-
-//   }
-// }
 
 export default DetailPage;
