@@ -18,7 +18,6 @@ const DetailPage = () => {
 
   useEffect(() => {
     getDatas();
-    console.log("hello");
   }, []);
 
   return (

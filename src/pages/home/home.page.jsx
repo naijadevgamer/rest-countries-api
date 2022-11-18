@@ -20,6 +20,7 @@ class HomePage extends React.Component {
     }
     this.setState({ datas: data });
     this.setState({ all: data });
+    console.log(data);
   };
 
   componentDidMount() {

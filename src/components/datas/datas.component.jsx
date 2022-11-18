@@ -3,6 +3,24 @@ import React from "react";
 class Datas extends React.Component {
   render() {
     const { data } = this.props;
+    // console.log(data.population);
+
+    // Add commas in between population numbers
+    // const refinedPopulation = (e) => {
+    //   for (let i = e.length - 1; i >= 0; i = -3) {
+    //     // e.slice()
+
+    //     console.log(e.slice(0, -i + 2) + "," + e.slice(-i + 2));
+    //   }
+    // };
+    // refinedPopulation("1234567");
+    // function reverseArray(array) {
+    //   let newArray = [];
+    //   for (let i = array["length"] - 1; i >= 0; i--) {
+    //     newArray.push(array[i]);
+    //   }
+    //   return newArray;
+    // }
 
     // converts languages value to array
     const languages =
@@ -13,19 +31,24 @@ class Datas extends React.Component {
       data.currencies !== undefined ? Object.values(data.currencies)[0] : "";
 
     // converts native name value to array
-    // const nativeName = Object.values(data.name.nativeName)[0].official;
+    const nativeName =
+      data.name.nativeName !== undefined
+        ? Object.values(data.name.nativeName)[0].official
+        : "Nil";
 
     return (
       <div className="datas">
         <div className="datas__sect1">
           <div className="datas__data-item">
-            <span>Native Name:</span> {"namt"}
+            <span>Native Name:</span> {nativeName}
           </div>
           <div className="datas__data-item">
-            <span>Population:</span> {data.population}
+            <span>Population:</span>{" "}
+            {data.population !== undefined ? data.population : "Nil"}
           </div>
           <div className="datas__data-item">
-            <span>Region:</span> {data.region}
+            <span>Region:</span>{" "}
+            {data.region !== undefined ? data.region : "Nil"}
           </div>
           <div className="datas__data-item">
             <span>Sub Region:</span>{" "}

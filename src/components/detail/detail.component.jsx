@@ -30,10 +30,11 @@ class Detail extends React.Component {
                   ? data.borders.map((border) =>
                       allDatas
                         .filter((data) => border === data.cca3)
-                        .map((data) => (
+                        .map((data, index) => (
                           <Link
                             to={`/detail/${data.name.common}`}
                             className="detail__button-link"
+                            key={index}
                           >
                             {" "}
                             <Button>{data.name.common}</Button>
