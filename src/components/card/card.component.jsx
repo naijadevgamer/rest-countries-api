@@ -10,7 +10,7 @@ class Card extends React.Component {
         <div className="card__details">
           <div className="card__name">{data.name.common}</div>
           <div className="card__data">
-            <span>Population:</span> {data.population}
+            <span>Population:</span> {data.population.toLocaleString()}
           </div>
           <div className="card__data">
             <span>Region:</span> {data.region}

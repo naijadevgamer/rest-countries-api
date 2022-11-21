@@ -3,24 +3,6 @@ import React from "react";
 class Datas extends React.Component {
   render() {
     const { data } = this.props;
-    // console.log(data.population);
-
-    // Add commas in between population numbers
-    // const refinedPopulation = (e) => {
-    //   for (let i = e.length - 1; i >= 0; i = -3) {
-    //     // e.slice()
-
-    //     console.log(e.slice(0, -i + 2) + "," + e.slice(-i + 2));
-    //   }
-    // };
-    // refinedPopulation("1234567");
-    // function reverseArray(array) {
-    //   let newArray = [];
-    //   for (let i = array["length"] - 1; i >= 0; i--) {
-    //     newArray.push(array[i]);
-    //   }
-    //   return newArray;
-    // }
 
     // converts languages value to array
     const languages =
@@ -44,7 +26,9 @@ class Datas extends React.Component {
           </div>
           <div className="datas__data-item">
             <span>Population:</span>{" "}
-            {data.population !== undefined ? data.population : "Nil"}
+            {data.population !== undefined
+              ? data.population.toLocaleString()
+              : "Nil"}
           </div>
           <div className="datas__data-item">
             <span>Region:</span>{" "}
