@@ -21,7 +21,7 @@ class Filter extends React.Component {
       <div className="filter">
         <div className="filter__setting">
           <div className="filter__text">Filter by Region</div>
-          {hidden ? (
+          {!hidden ? (
             <UpIcon className="filter__icon" onClick={handleToggleHidden} />
           ) : (
             <DownIcon className="filter__icon" onClick={handleToggleHidden} />
