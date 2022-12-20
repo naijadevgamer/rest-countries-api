@@ -31,7 +31,7 @@ body {
   min-height: 100vh;
   background-color: $background-light;
   color: var(--color-text);
-  transition: 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease;
   overflow-x: hidden;
 
   &::-webkit-scrollbar {

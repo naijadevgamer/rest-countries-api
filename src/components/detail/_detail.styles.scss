@@ -2,8 +2,8 @@
   margin: 11rem auto;
   width: 85%;
   font-size: 1.6rem;
-  transition: 0.3s ease;
   color: var(--color-text);
+  transition: color 0.3s ease;
   @include respond(phone) {
     width: 90%;
     margin: 9rem auto;
@@ -21,7 +21,7 @@
     height: 1.5rem;
     width: 2rem;
     fill: var(--color-text);
-    transition: 0.3s ease;
+    transition: fill 0.3s ease;
   }
   &__info {
     display: flex;
@@ -38,6 +38,7 @@
     height: 40rem;
     width: 47%;
     background-color: red;
+    animation: fromDown 0.6s ease-out;
     @include respond(tab-land) {
       width: 43%;
       height: 30rem;
@@ -48,6 +49,7 @@
     @include respond(phone) {
       height: 55vw;
       width: 100%;
+      animation: fromUp 0.6s ease-out;
     }
   }
   &__info-datas {
@@ -77,5 +79,31 @@
         display: block;
       }
     }
+  }
+}
+@keyframes fromDown {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  85% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fromUp {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  85% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
