@@ -2,7 +2,6 @@
   @include element;
   position: relative;
   color: var(--color-text);
-  transition: color 0.3s ease;
   @include respond(phone) {
     margin-top: 3rem;
     align-self: start;
@@ -16,6 +15,7 @@
   &__text {
     margin-right: 2.5rem;
     font-weight: 600;
+    transition: all 0.3s ease;
   }
   &__icon {
     width: 1.5rem;
@@ -39,6 +39,7 @@
   }
   &__item {
     font-weight: 600;
+    transition: all 0.3s ease;
     cursor: pointer;
     &:not(:last-child) {
       margin-bottom: 1rem;
