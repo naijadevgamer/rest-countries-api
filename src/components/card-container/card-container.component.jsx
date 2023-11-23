@@ -1,14 +1,19 @@
 import React from "react";
 import Card from "../card/card.component";
+import Loader from "../loader/loader";
 
 class CardContainer extends React.Component {
   render() {
-    const { datas } = this.props;
+    const { datas, loading } = this.props;
     return (
       <div className="card-container">
-        {datas.map((data, index) => (
-          <Card key={index.toString()} data={data} link={data.name.common} />
-        ))}
+        {loading ? (
+          <Loader />
+        ) : (
+          datas.map((data, index) => (
+            <Card key={index.toString()} data={data} link={data.name.common} />
+          ))
+        )}
       </div>
     );
   }

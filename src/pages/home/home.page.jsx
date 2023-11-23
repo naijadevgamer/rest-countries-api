@@ -10,6 +10,7 @@ class HomePage extends React.Component {
       all: [],
       datas: [],
       searchValue: "",
+      loading: true,
     };
   }
   getDatas = async () => {
@@ -20,7 +21,7 @@ class HomePage extends React.Component {
     }
     this.setState({ datas: data });
     this.setState({ all: data });
-    console.log(data);
+    this.setState({ loading: false });
   };
 
   componentDidMount() {
@@ -28,7 +29,7 @@ class HomePage extends React.Component {
   }
 
   render() {
-    const { searchValue, datas, all } = this.state;
+    const { searchValue, datas, all, loading } = this.state;
     const handleChange = (e) => {
       this.setState({ searchValue: e.target.value });
     };
@@ -57,7 +58,7 @@ class HomePage extends React.Component {
             handleFilterRegions={handleFilterRegions}
           />
         </div>
-        <CardContainer datas={filteredDatas} />
+        <CardContainer datas={filteredDatas} loading={loading} />
       </div>
     );
   }
