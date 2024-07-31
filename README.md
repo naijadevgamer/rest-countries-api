@@ -14,8 +14,6 @@ This is a solution to the [REST Countries API with color theme switcher challeng
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -31,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://github.com/thenaijagamer/rest-countries-api)
-- Live Site URL: [Countries database](https://thenaijagamer.github.io/rest-countries-api/)
+- Solution [Solution](https://github.com/thenaijagamer/rest-countries-api)
+- Live Site [Countries database](https://thenaijagamer.github.io/rest-countries-api/)
 
 ## My process
 
@@ -59,7 +57,7 @@ Users should be able to:
 
 ## Author
 
-- Website - [Abdullah Saleeman](https://www.remoteok.com/@abdullah_saleeman)
-- Frontend Mentor - [@thenaijagamer](https://www.frontendmentor.io/profile/thenaijagamer)
-- Twitter - [@thenaijagamer](https://www.twitter.com/thenaijagamer_)
 - LinkedIn - [Abdullah Saleeman](https://www.linkedin.com/in/abdullah-saleeman-360170243)
+- Frontend Mentor - [@thenaijagamer](https://www.frontendmentor.io/profile/naijadevgamer)
+- Twitter - [@naijadevgamer](https://www.twitter.com/naijadevgamer)
+
