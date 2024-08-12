@@ -27,10 +27,14 @@ Users should be able to:
 - Click through to the border countries on the detail page
 - Toggle the color scheme between light and dark mode _(optional)_
 
+### Screenshot
+
+![](./public/app.png)
+
 ### Links
 
-- Solution [Solution](https://github.com/thenaijagamer/rest-countries-api)
-- Live Site [Countries database](https://thenaijagamer.github.io/rest-countries-api/)
+- Solution [Solution](https://github.com/naijadevgamer/rest-countries-api)
+- Live Site [Countries database](https://naijadevgamer.github.io/rest-countries-api/)
 
 ## My process
 
@@ -58,6 +62,5 @@ Users should be able to:
 ## Author
 
 - LinkedIn - [Abdullah Saleeman](https://www.linkedin.com/in/abdullah-saleeman-360170243)
-- Frontend Mentor - [@thenaijagamer](https://www.frontendmentor.io/profile/naijadevgamer)
+- Frontend Mentor - [@naijadevgamer](https://www.frontendmentor.io/profile/naijadevgamer)
 - Twitter - [@naijadevgamer](https://www.twitter.com/naijadevgamer)
-
